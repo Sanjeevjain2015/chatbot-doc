@@ -16,6 +16,7 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 import re
 import textwrap
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -76,7 +77,9 @@ def main():
             print(doc.page_content)
 
         # Upload chunks as vector embeddings into FAISS
-        embeddings = OpenAIEmbeddings()
+#        embeddings = OpenAIEmbeddings()
+        
+        embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
         db = FAISS.from_documents(split_documents, embeddings)
         # Save the FAISS DB locally
         db.save_local("faiss_index_2")
