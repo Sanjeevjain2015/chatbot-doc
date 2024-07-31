@@ -1,5 +1,5 @@
-openai                       
-streamlit                    1.37.0
+openai                       == 1.37.1
+streamlit                    == 1.37.0
 langchain                    0.2.11
 langchain-community          0.2.10
 langchain-core               0.2.24
