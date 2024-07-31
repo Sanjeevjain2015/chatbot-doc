@@ -1,2 +1,7 @@
+openai
+langchain
+langchain-openai
 streamlit
-pandas
+faiss-cpu
+langchain_community
+langchain_community.document_loaders
