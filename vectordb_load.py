@@ -17,8 +17,8 @@ from langchain_community.vectorstores import FAISS
 import re
 import textwrap
 
-#from dotenv import load_dotenv
-#load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 
 import streamlit as st
 
