@@ -42,7 +42,7 @@ def main():
 
 #    uploaded_file = st.file_uploader("Select Word Document", type=["docx", "doc"])
     text = ""
-    uploaded_file = 'CPI+Development+Standards.docx'
+    uploaded_file = "CPI+Development+Standards.docx"
     if uploaded_file is not None:
         file_extension = uploaded_file.name.split('.')[-1]
 
