@@ -1,10 +1,10 @@
-openai
-langchain
-langchain-openai
-streamlit
-faiss-cpu
-langchain-community
-docx2txt
-py
-python-dotenv
-upgrade langchain
+openai                       1.37.1
+streamlit                    1.37.0
+langchain                    0.2.11
+langchain-community          0.2.10
+langchain-core               0.2.24
+docx2txt                     0.8
+faiss-cpu                    1.8.0.post1
+langchain-openai             0.1.19
+langchain-text-splitters     0.2.2
+py                           1.11.0
