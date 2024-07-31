@@ -22,14 +22,12 @@ load_dotenv()
 
 import streamlit as st
 
-OPENAI_API_KEY='sk-proj-TbBEEZOZLVj0eu0GG2GtT3BlbkFJLuJbJq06eYMrqcVRpo0L'
-
 def process_docx(docx_file):
     # Add your docx processing code here
     text=""
     #Docx2txtLoader loads the Document 
     loader=Docx2txtLoader(docx_file)
-
+    #loader=Docx2txtLoader("CPI+Development+Standards")
     #Load Documents and split into chunks
     text = loader.load_and_split()
 
