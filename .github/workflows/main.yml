@@ -1,12 +1,11 @@
-  workflow_dispatch:
+name:secrets and env variables
 
+on:
+  workflow_dispatch:
 jobs:
   check-dist:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4.1.6
-      - name: Decrypt large secret
-        run: ./decrypt_secret.sh
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          run : echo 'api key is ${{ secrets.OPENAI_API_KEY }}'
