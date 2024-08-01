@@ -1,11 +1,11 @@
 name:secrets and env variables
-
 on:
-  workflow_dispatch:
+  workflow_dispatch
 jobs:
-  check-dist:
-    runs-on: ubuntu-latest
-    steps:
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          run : echo 'api key is ${{ secrets.OPENAI_API_KEY }}'
+  runs-on: ubuntu-latest
+  env:
+  steps:
+      -name:read a secret variable
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run : echo 'api key is ${{ secrets.OPENAI_API_KEY }}'
