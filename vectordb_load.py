@@ -16,9 +16,12 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 import re
 import textwrap
+import os
 
-from dotenv import load_dotenv
-load_dotenv()
+#from dotenv import load_dotenv
+#load_dotenv()
+
+OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 
 import streamlit as st
 
