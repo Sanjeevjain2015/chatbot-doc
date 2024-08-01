@@ -67,15 +67,15 @@ def main():
         
 #        split_documents = re.sub(r'[^\w\s]', '', split_documents_raw) 
 
-        print(split_documents) 
+        #print(split_documents) 
 
-        print(f"Split into {len(split_documents)} Documents...")
-        print(split_documents[0].metadata)        
-        for doc in split_documents:
-            print("##---- Page ---##")
-            print(doc.metadata['source'])
-            print("##---- Content ---##")
-            print(doc.page_content)
+        #print(f"Split into {len(split_documents)} Documents...")
+        #print(split_documents[0].metadata)        
+        # for doc in split_documents:
+        #     print("##---- Page ---##")
+        #     print(doc.metadata['source'])
+        #     print("##---- Content ---##")
+        #     print(doc.page_content)
 
         # Upload chunks as vector embeddings into FAISS
         embeddings = OpenAIEmbeddings()
