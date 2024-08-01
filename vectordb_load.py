@@ -40,15 +40,17 @@ def normalize_text(s, sep_token = " \n "):
 def main():
     st.title("Convert Word Docment to VectorDB")
 
-#    uploaded_file = st.file_uploader("Select Word Document", type=["docx", "doc"])
+    uploaded_file = st.file_uploader("Select Word Document", type=["docx", "doc"])
     text = ""
-    uploaded_file = "CPI+Development+Standards.docx"
+#    uploaded_file = "CPI+Development+Standards.docx"
     if uploaded_file is not None:
         file_extension = uploaded_file.name.split('.')[-1]
 
+        st.write(f"File : {uploaded_file}")
         st.write("File Details:")
         st.write(f"File Name: {uploaded_file.name}")
         st.write(f"File Type: {file_extension}")
+
         if file_extension == "docx":
             text = process_docx(uploaded_file.name)
 #            st.write(f"{text}")
